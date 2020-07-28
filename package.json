@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/PascalUlor/server-planner/issues"
   },
-  "homepage": "https://github.com/PascalUlor/server-planner#readme"
+  "homepage": "https://github.com/PascalUlor/server-planner#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
+  }
 }
