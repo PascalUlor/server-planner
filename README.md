@@ -65,6 +65,15 @@ Each input field is validated and would return a *field specific* error message 
 }
 ```
 
+
+## Integration tests
+
+To test the endpoints, create a test database and run the following:
+```
+npm run test
+```
+
+
 ## Dockerization
 To run the Application on docker. Input the following in your terminal
 ```
@@ -79,12 +88,9 @@ If all goes well, you should see something similar to this on the console:
 Application started on http://localhost:5000
 ```
 
-## Integration tests
+## Deployment
 
-To test the endpoints, create a test database and run the following:
-```
-npm run test
-```
+API is deployed on [Heroku](https://trium-server.herokuapp.com/)
 
 ## Built With
 
