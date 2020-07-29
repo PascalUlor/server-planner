@@ -10,10 +10,8 @@ const calculate = (serverType, virtualMachines) => {
 
     while (virtualMachines.length > 0){
         let vM = virtualMachines.shift();
-
-        console.log(serverType)
         
-        if(vM['CPU'] < serverType['CPU'] && vM['RAM'] <= serverType['RAM'] && vM['HDD'] <= serverType['HDD']){
+        if(vM['CPU'] <= serverType['CPU'] && vM['RAM'] <= serverType['RAM'] && vM['HDD'] <= serverType['HDD']){
             serverType['CPU'] -= vM['CPU'];
             serverType['RAM'] -= vM['RAM'];
             serverType['HDD'] -= vM['HDD'];

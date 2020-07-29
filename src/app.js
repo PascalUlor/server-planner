@@ -14,7 +14,7 @@ app.use('/api/v1/', routes)
 app.get('/', (req, res) => {
     res.status(200).json({
         status: 200,
-        message: 'Hello from your Backend Engineer!!!'
+        message: 'Hello from your Backend Engineer! I love coding.'
     });
 });
 
@@ -28,3 +28,5 @@ app.get('*', (req, res) => {
 app.listen(port, ()=>{
     console.log(`Application started on http://localhost:${port}`)
 });
+
+module.exports = app;

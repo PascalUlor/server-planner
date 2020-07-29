@@ -4,9 +4,9 @@
   "description": "Server Planner App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon --exec node src/index.js",
+    "test": "jest --detectOpenHandles --coverage --runInBand --forceExit",
+    "start": "node src/app.js",
+    "dev": "nodemon --exec node src/app.js",
     "watch": "nodemon"
   },
   "repository": {
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "jest": "^26.1.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   }
 }

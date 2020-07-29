@@ -1,7 +1,6 @@
 const calculate = require('../util');
 
 
-
 const getServerCount = (req, res) =>{
     const { serverType, virtualMachines } = req.body;
     

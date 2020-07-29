@@ -4,6 +4,6 @@ const getServerCount = require('../controller');
 const router = Router()
 
 
-router.route('/').post(getServerCount);
+router.route('/calculate').post(getServerCount);
 
 module.exports = router;
