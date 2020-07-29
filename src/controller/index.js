@@ -1,4 +1,5 @@
-const calculate = require('../util');
+const calculate = require('../util/calculate');
+const requestHandler = require('../util/requestHandler');
 
 
 const getServerCount = (req, res) =>{
@@ -6,10 +7,7 @@ const getServerCount = (req, res) =>{
     
     const vmCount = calculate(serverType, virtualMachines)
 
-    res.status(200).json({
-        status: 200,
-        result: vmCount
-    })
+    return requestHandler.success(res, 201, 'Server count successfully calculated', vmCount)
 }
 
 module.exports = getServerCount;

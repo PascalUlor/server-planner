@@ -26,8 +26,39 @@ describe('Test endpoints /api/v1', () => {
         .post('/api/v1/calculate')
         .set('Content-Type', 'application/json')
         .send(mock.sampleInput);
-        expect(res.status).toBe(200);
+        expect(res.status).toBe(201);
+        expect(res.body.success).toBe(true);
+        expect(res.body.statusCode).toEqual(201)
+        expect(res.body.message).toEqual('Server count successfully calculated')
         expect(res.body.result).toEqual(2)
         done();
     });
+
+    test('[POST]/ for empty input field', async(done)=>{
+        const res = await request(app)
+        .post('/api/v1/calculate')
+        .set('Content-Type', 'application/json')
+        .send(mock.emptyInput);
+        expect(res.body.success).toBe(false);
+        expect(res.body.statusCode).toEqual(400)
+        expect(res.body.err).toEqual({
+            serverType: "serverType field can not be blank",
+            virtualMachines: "virtualMachines field can not be blank"
+        })
+        done();
+    });
+
+    test('[POST]/ for wrong input type', async(done)=>{
+        const res = await request(app)
+        .post('/api/v1/calculate')
+        .set('Content-Type', 'application/json')
+        .send(mock.stringInput);
+        expect(res.body.success).toBe(false)
+        expect(res.body.statusCode).toEqual(400)
+        expect(res.body.err).toEqual({
+            serverType: "serverType must be an object",
+            virtualMachines: "virtualMachines must be an object"
+        })
+        done();
+    })
 });
