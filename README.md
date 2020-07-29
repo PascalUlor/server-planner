@@ -1,7 +1,7 @@
 **Server Planner Api**
 These are solutions to the Backend Developer take home test for Trium Tech
 ## Getting Started
-The Live Application is deployed on heroku at https://remote-roof-be.herokuapp.com/ or can be cloned from github.com.
+The Live Application is deployed on heroku at https://trium-server.herokuapp.com/ or can be cloned from github.com.
 
 ### Prerequisites
 

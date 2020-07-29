@@ -10,11 +10,7 @@ const inputValidator =(req, res, next) => {
       });
 
     if (Object.keys(check).length > 0) {
-        return requestHandler.error(res, 400, 'Request Failed', check)
-        // return res.status(400).json({
-        //   statusCode: 400,
-        //   check,
-        // });
+        return requestHandler.error(res, 400, 'Request Failed', check);
       }
     next();
 };

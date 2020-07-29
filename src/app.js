@@ -12,7 +12,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 5000
 
-app.use('/api/v1/', routes)
+app.use('/api/v1/', routes);
 
 app.get('/', (req, res) => {
     res.status(200).json({

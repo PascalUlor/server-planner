@@ -1,5 +1,3 @@
-const validator = require('validator');
-
 const checkInput = (inputValue) => {
   const errors = {};
   Object.keys(inputValue).forEach((key) => {
