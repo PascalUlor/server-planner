@@ -14,6 +14,7 @@ This command installs all the necessary dependencies
 
 
 ### Setup
+Create a `.env` using the `.env.example` file as a guide, using your local environment variables
 
 ```
 npm run dev
@@ -71,6 +72,11 @@ chmod +x ./start.sh
 ```
 ```
 ./start.sh
+```
+
+If all goes well, you should see something similar to this on the console:
+```
+Application started on http://localhost:5000
 ```
 
 ## Integration tests
