@@ -53,6 +53,15 @@ Adds an entry into the database
 "virtualMachines": [{"CPU": 1, "RAM": 16, "HDD": 10}, {"CPU": 1, "RAM": 16, "HDD": 10}, {"CPU": 2, "RAM": 32, "HDD": 100}]
 }
 ```
+Sample response on *success*
+```
+{
+    "success": true,
+    "statusCode": 201,
+    "message": "Server count successfully calculated",
+    "result": 2
+}
+```
 Each input field is validated and would return a *field specific* error message if empty.
 ```
 {
