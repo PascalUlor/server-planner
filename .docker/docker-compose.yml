@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  webapp:
+    container_name: main-app
+    build:
+      context: ../
+      dockerfile: ./.docker/Dockerfile
+    ports:
+      # - Host-Port:Contaier-Port
+      - '5000:5000'
+    volumes:
+      - api:/app/
+    networks:
+      - backend
+    hostname: app_server
+
+networks:
+  backend:
+    driver: bridge
+volumes:
+  api:

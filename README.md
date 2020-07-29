@@ -53,6 +53,25 @@ Adds an entry into the database
 }
 ```
 Each input field is validated and would return a *field specific* error message if empty.
+```
+{
+    "success": false,
+    "statusCode": 400,
+    "message": "Request Failed",
+    "err": {
+        "serverType": "serverType must be an object"
+    }
+}
+```
+
+## Dockerization
+To run the Application on docker. Input the following in your terminal
+```
+chmod +x ./start.sh
+```
+```
+./start.sh
+```
 
 ## Integration tests
 
